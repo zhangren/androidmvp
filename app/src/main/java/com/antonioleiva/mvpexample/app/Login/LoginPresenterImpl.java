@@ -27,7 +27,7 @@ public class LoginPresenterImpl implements LoginPresenter, LoginInteractor.OnLog
         this.loginView = loginView;
         this.loginInteractor = new LoginInteractorImpl();
     }
-
+    //对view的更新操作，对逻辑的操作发起，都在presenter里进行
     @Override public void validateCredentials(String username, String password) {
         if (loginView != null) {
             loginView.showProgress();
